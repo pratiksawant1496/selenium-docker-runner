@@ -3,18 +3,18 @@ services:
   vendor-portal:
     image: vinsdocker/selenium
     environment:
-    - BROWSER=chrome
-    - HUB_HOST=hub    
-    - THREAD_COUNT=3
-    - TEST_SUITE=vendor-portal.xml
+      - BROWSER
+      - HUB_HOST=hub
+      - THREAD_COUNT=3
+      - TEST_SUITE=vendor-portal.xml
     volumes:
-    - ./output/vendor-portal:/home/selenium-docker/test-output
+      - ./output/vendor-portal:/home/selenium-docker/test-output
   flight-reservation:
     image: vinsdocker/selenium
     environment:
-    - BROWSER=firefox
-    - HUB_HOST=hub    
-    - THREAD_COUNT=4    
-    - TEST_SUITE=flight-reservation.xml
+      - BROWSER
+      - HUB_HOST=hub
+      - THREAD_COUNT=4
+      - TEST_SUITE=flight-reservation.xml
     volumes:
-    - ./output/flight-reservation:/home/selenium-docker/test-output     
+      - ./output/flight-reservation:/home/selenium-docker/test-output
