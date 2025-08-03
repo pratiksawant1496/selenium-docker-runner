@@ -1,6 +1,6 @@
 pipeline{
 
-    agent (label 'docker')
+    agent {label 'docker'}
 
     parameters {
         choice choices: ['chrome', 'firefox'], description: 'Select the browser', name: 'BROWSER'
